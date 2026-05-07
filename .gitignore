@@ -1,0 +1,18 @@
+# 笔记文件
+data/notes/
+
+# 向量数据库存储
+kb_storage/
+
+# Python 虚拟环境
+venv/
+.venv/
+
+# Python 缓存
+__pycache__/
+*.pyc
+*.pyo
+
+# 系统文件
+.DS_Store
+Thumbs.db

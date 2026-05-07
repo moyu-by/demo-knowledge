@@ -1,0 +1,24 @@
+# 个人知识库配置
+kb:
+  storage_dir: ./kb_storage   # 向量数据库本地存储路径
+  notes_dir: ./data/notes     # Markdown 笔记文件目录
+
+embedding:
+  model: BAAI/bge-small-zh-v1.5  # 中文嵌入模型，搜索效果远好于英文模型
+  device: cpu                 # cpu / cuda
+
+llm:
+  provider: anthropic
+  model: deepseek-v4-flash
+  # 可选升级: deepseek-v4-pro
+  # 第三方兼容 API 地址（可选，也支持 ANTHROPIC_BASE_URL 环境变量）
+  api_base: ${ANTHROPIC_API_BASE_URL}
+  # 优先读取环境变量 ANTHROPIC_API_KEY，找不到则用下面的值
+  api_key: ${ANTHROPIC_API_KEY}
+
+chunking:
+  max_tokens: 1000    # 每块最大 token 数
+  overlap: 50        # 块间重叠 token 数
+
+retrieval:
+  top_k: 100           # 检索时返回的最相关片段数（原来3太少，中文检索需要更多候选）
