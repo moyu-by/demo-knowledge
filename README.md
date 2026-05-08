@@ -1,4 +1,4 @@
-# knowledge-demo · 个人知识库笔记整理 Agent
+# demo-knowledge · 个人知识库笔记整理 Agent
 
 基于向量检索与 LLM 的本地知识库工具，将散落的 Markdown 笔记转化为可语义检索的结构化知识库。
 
